@@ -1,6 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require ('fs');
+const port = process.env.PORT || 8080;
+
 
 var app = express();
 
@@ -49,6 +51,6 @@ app.get('/home', (req, res) => {
     res.send('home do site');
 })
 
-app.listen(8080, () => {
-    console.log('Servidor rodando na porta 8080')
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`)
 });
