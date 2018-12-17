@@ -47,10 +47,11 @@ app.get('/about', (req, res) => {
     });
 });
 
-app.get('/home', (req, res) => {
-    res.send('home do site');
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        title: 'Project Page'
+    })
 })
-
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`)
 });
